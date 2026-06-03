@@ -1,3 +1,179 @@
 body{
     background-color: rgb(159, 219, 159);
 }
+
+/* ===== Flower Store Design ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+
+    background:
+        linear-gradient(rgba(15, 20, 30, 0.55), rgba(15, 20, 30, 0.75)),
+        url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Soft moving glow */
+body::before {
+    content: "";
+    position: fixed;
+    inset: -20%;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 105, 180, 0.35), transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(255, 220, 130, 0.3), transparent 25%),
+        radial-gradient(circle at 50% 80%, rgba(130, 255, 180, 0.25), transparent 30%);
+    filter: blur(45px);
+    animation: flowerGlow 8s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+@keyframes flowerGlow {
+    from {
+        transform: translate(-30px, -20px) scale(1);
+    }
+    to {
+        transform: translate(30px, 25px) scale(1.12);
+    }
+}
+
+/* Lines */
+hr {
+    width: 80%;
+    margin: 25px auto;
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+    );
+}
+
+/* Navigation */
+a {
+    display: inline-block;
+    margin: 20px 10px 5px;
+    padding: 12px 28px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition: 0.35s ease;
+}
+
+a:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(255, 182, 193, 0.35);
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.35);
+}
+
+/* Title */
+h1 {
+    margin-top: 50px;
+    font-size: clamp(42px, 7vw, 82px);
+    letter-spacing: 3px;
+    text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.8),
+        0 0 35px rgba(255, 105, 180, 0.8);
+
+    animation: titleFloat 3s infinite ease-in-out;
+}
+
+@keyframes titleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Flower image */
+img {
+    width: min(85%, 650px);
+    margin-top: 35px;
+    border-radius: 30px;
+
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        0 0 45px rgba(255, 182, 193, 0.45);
+
+    animation: imageReveal 1.4s ease forwards, imageFloat 4s infinite ease-in-out 1.4s;
+    opacity: 0;
+}
+
+@keyframes imageReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes imageFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Footer */
+p {
+    width: fit-content;
+    margin: 45px auto 25px;
+    padding: 14px 28px;
+
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    a {
+        padding: 10px 22px;
+        margin: 12px 6px;
+    }
+
+    h1 {
+        margin-top: 35px;
+        font-size: 42px;
+    }
+
+    img {
+        width: 90%;
+        border-radius: 22px;
+    }
+}
