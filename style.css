@@ -528,3 +528,365 @@ p::before {
         font-size: 13px;
     }
 }
+
+/* ================================
+   CONTACT PAGE - LIQUID GLASS FORM
+================================ */
+
+span {
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: bold;
+    margin: 0 2px;
+}
+
+/* Contact title */
+h2 {
+    width: fit-content;
+    margin: 26px auto 30px;
+    padding: 14px 34px;
+
+    color: #fff;
+    font-size: clamp(26px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.22),
+            rgba(255, 255, 255, 0.07)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.35),
+        0 18px 45px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(255, 130, 200, 0.28);
+
+    text-shadow:
+        0 0 12px rgba(255, 255, 255, 0.75),
+        0 0 28px rgba(255, 120, 200, 0.75);
+
+    animation: contactTitleIn 1s ease forwards;
+}
+
+h2::before {
+    content: "🌺 ";
+}
+
+@keyframes contactTitleIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Form glass container */
+.container {
+    width: min(90%, 520px);
+    margin: 35px auto 0;
+    padding: 36px;
+
+    border-radius: 34px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.065)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.38),
+        0 30px 80px rgba(0, 0, 0, 0.42),
+        0 0 65px rgba(255, 120, 200, 0.3);
+
+    position: relative;
+    overflow: hidden;
+
+    animation: formEntrance 1.2s ease forwards;
+}
+
+/* Form shine */
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.18) 45%,
+            transparent 70%
+        );
+
+    transform: translateX(-130%);
+    animation: formShine 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.container::after {
+    content: "✿";
+    position: absolute;
+    right: 22px;
+    top: 18px;
+
+    font-size: 34px;
+    color: rgba(255, 220, 235, 0.65);
+    text-shadow: 0 0 18px rgba(255, 150, 210, 0.9);
+
+    animation: smallFlowerFloat 4s ease-in-out infinite;
+}
+
+@keyframes formEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(45px) scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes formShine {
+    0%, 40% {
+        transform: translateX(-130%);
+    }
+
+    65%, 100% {
+        transform: translateX(130%);
+    }
+}
+
+@keyframes smallFlowerFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(12deg);
+    }
+}
+
+/* Form layout */
+form {
+    position: relative;
+    z-index: 2;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin: 18px 0 8px;
+
+    text-align: left;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    text-shadow: 0 0 12px rgba(255, 130, 200, 0.45);
+}
+
+label::before {
+    content: "🌷 ";
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 15px 18px;
+
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    border-radius: 18px;
+
+    outline: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0.07)
+        );
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.25),
+        0 12px 30px rgba(0, 0, 0, 0.28);
+
+    transition: 0.35s ease;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+input:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 180, 220, 0.75);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.32),
+        0 16px 35px rgba(0, 0, 0, 0.32),
+        0 0 22px rgba(255, 130, 200, 0.28);
+}
+
+input:focus {
+    transform: translateY(-3px) scale(1.01);
+
+    border-color: rgba(255, 210, 235, 0.95);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 190, 225, 0.25),
+            rgba(255, 255, 255, 0.09)
+        );
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.38),
+        0 18px 42px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(255, 115, 195, 0.55);
+}
+
+/* Remove old br spacing problem */
+br {
+    display: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    margin-top: 28px;
+    padding: 15px 28px;
+
+    border: none;
+    border-radius: 999px;
+
+    color: #fff;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 110, 190, 0.9),
+            rgba(255, 190, 120, 0.85)
+        );
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(255, 120, 200, 0.45);
+
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+button::before {
+    content: "Send Message ✿";
+}
+
+button {
+    font-size: 0;
+}
+
+button::before {
+    font-size: 17px;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 255, 255, 0.55),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+    transition: 0.55s ease;
+}
+
+button:hover {
+    transform: translateY(-6px) scale(1.03);
+
+    box-shadow:
+        0 24px 55px rgba(0, 0, 0, 0.42),
+        0 0 48px rgba(255, 130, 200, 0.7);
+}
+
+button:hover::after {
+    left: 140%;
+}
+
+button:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+/* Contact page footer spacing */
+.container + p,
+p {
+    margin-top: 50px;
+}
+
+/* Responsive contact */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 28px 22px;
+        border-radius: 28px;
+    }
+
+    label {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    input {
+        padding: 14px 15px;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 14px 22px;
+    }
+
+    button::before {
+        font-size: 15px;
+    }
+}
