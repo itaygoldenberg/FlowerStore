@@ -1,70 +1,120 @@
-<div align="center">
+<p align="center">
+  <img src="./docs/readme-banner.svg" alt="FlowerStore animated project banner" width="100%" />
+</p>
 
-# FlowerStore
+<p align="center">
+  <a href="https://itaygoldenberg.github.io/FlowerStore/"><img src="./docs/actions/primary.svg" alt="Open the live FlowerStore application" width="250" /></a>
+  <a href="https://github.com/itaygoldenberg/FlowerStore"><img src="./docs/actions/source.svg" alt="View FlowerStore source code" width="250" /></a>
+  <a href="https://www.linkedin.com/in/itay-goldenberg/"><img src="./docs/actions/linkedin.svg" alt="Connect with Itay Goldenberg on LinkedIn" width="250" /></a>
+</p>
 
-**A lightweight multi-page storefront concept for a local flower shop.**
+<p align="center">
+  <a href="#overview">Overview</a>&nbsp;&middot;&nbsp;
+  <a href="#features">Features</a>&nbsp;&middot;&nbsp;
+  <a href="#workflow">Workflow</a>&nbsp;&middot;&nbsp;
+  <a href="#technology">Technology</a>&nbsp;&middot;&nbsp;
+  <a href="#running-locally">Local setup</a>
+</p>
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Store-ec4899?style=for-the-badge&logo=githubpages&logoColor=white)](https://itaygoldenberg.github.io/FlowerStore/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111)](https://developer.mozilla.org/docs/Web/JavaScript)
-
-</div>
+> [!NOTE]
+> A static storefront project focused on visual storytelling, navigation and a simple contact journey.
 
 ## Overview
 
-FlowerStore is a static storefront website that presents a flower business through a clear Home, About and Contact experience. The project focuses on multi-page navigation, consistent visual styling and a simple contact journey without requiring a framework or build tool.
+FlowerStore is a small multi-page storefront concept for a local flower shop. It combines immersive floral imagery, glass-like surfaces and consistent navigation across Home, About and Contact pages.
 
-## Pages
+The project demonstrates how a static website can still feel expressive and cohesive through strong visual direction and lightweight browser enhancements.
 
-| Page | Purpose |
+<table><tr><td align="center" width="25%"><strong>3</strong><br /><sub>site pages</sub></td><td align="center" width="25%"><strong>GLASS</strong><br /><sub>visual system</sub></td><td align="center" width="25%"><strong>FORM</strong><br /><sub>contact path</sub></td><td align="center" width="25%"><strong>ZERO</strong><br /><sub>dependencies</sub></td></tr></table>
+
+| Project detail | Implementation |
 |---|---|
-| Home | Introduces the shop and its floral offering |
-| About | Presents the store story and supporting imagery |
-| Contact Us | Provides a focused name-and-email contact form |
+| Home | Store introduction and floral offering |
+| About | Shop story and supporting imagery |
+| Contact | Focused name-and-email contact form |
+| Runtime | Static browser application with no build step |
 
-## Highlights
+## Contents
 
-- Consistent navigation across all pages.
-- Responsive presentation for desktop and smaller screens.
-- Local image assets for the storefront experience.
-- Semantic content sections and a simple contact form.
-- Small JavaScript enhancement that keeps the browser title current with local time.
-- Zero dependencies and no build process.
+- [Overview](#overview)
+- [Features](#features)
+- [Workflow](#workflow)
+- [Technology](#technology)
+- [Project structure](#project-structure)
+- [Running locally](#running-locally)
+- [Operational notes](#operational-notes)
+- [Author](#author)
 
-## Tech Stack
+## Features
+
+### Immersive presentation
+
+Layered imagery, soft floral lighting and glass-like surfaces create a distinct boutique identity while preserving readable page content.
+
+### Multi-page navigation
+
+Home, About and Contact pages share one visual system and predictable navigation model.
+
+### Lightweight enhancement
+
+A small JavaScript behavior updates the browser title with local time. The rest of the experience remains dependency-free and easy to host.
+
+## Workflow
+
+<p align="center">
+  <img src="./docs/workflow.svg" alt="FlowerStore animated application workflow" width="100%" />
+</p>
+
+## Technology
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js" alt="FlowerStore primary technology logos" />
+</p>
 
 | Technology | Role |
 |---|---|
-| HTML5 | Page structure, navigation and form markup |
-| CSS3 | Storefront layout, typography and responsive styling |
-| JavaScript | Lightweight dynamic browser-title behavior |
+| HTML5 | Page structure, navigation and contact form |
+| CSS3 | Immersive styling, glass effects and animation |
+| JavaScript | Lightweight dynamic title enhancement |
+| GitHub Pages | Static public deployment |
 
-## Project Structure
+## Project structure
 
 ```text
 FlowerStore/
 |-- index.html        Home page
 |-- about.html        About page
 |-- contact-us.html   Contact page
-|-- style.css         Shared design system
-|-- main.js           Small dynamic enhancement
+|-- style.css         Shared visual system
+|-- main.js           Browser-title enhancement
 |-- images/           Store imagery
+|-- docs/             README-only visual assets
 |-- LICENSE           Project license
 `-- README.md         Project documentation
 ```
 
-## Run Locally
+## Running locally
 
 ```bash
 git clone https://github.com/itaygoldenberg/FlowerStore.git
 cd FlowerStore
 ```
 
-Open `index.html` directly, or use a local static server such as VS Code Live Server.
+Open `index.html` directly or serve the directory with VS Code Live Server.
+
+## Operational notes
+
+- The contact form is a frontend demonstration and does not submit to a backend service.
+- Remote background imagery requires an internet connection.
 
 ## Author
 
-Built by **Itay Goldenberg**.
+<p align="center">
+  <strong>Itay Goldenberg</strong><br />
+  Full Stack Developer Student
+</p>
 
-[GitHub](https://github.com/itaygoldenberg) | [LinkedIn](https://www.linkedin.com/in/itay-goldenberg/)
+<p align="center">
+  <a href="https://github.com/itaygoldenberg"><img src="./docs/actions/github.svg" alt="Itay Goldenberg on GitHub" width="250" /></a>
+  <a href="https://www.linkedin.com/in/itay-goldenberg/"><img src="./docs/actions/linkedin.svg" alt="Itay Goldenberg on LinkedIn" width="250" /></a>
+</p>
